@@ -64,9 +64,9 @@ class Sort:
             middle=len(iter_ob)//2
             left_arr=iter_ob[:middle]
             right_arr=iter_ob[middle:]
-            self.mergeSort(left_arr,compare)
-            self.mergeSort(right_arr,compare)
-            return merge(left_arr,right_arr,compare)
+            left=self.mergeSort(left_arr,compare)
+            right=self.mergeSort(right_arr,compare)
+            return merge(left,right,compare)
 
     def partition(self,iter_obj, strat, end):
         pivot = iter_obj[strat]
@@ -126,4 +126,4 @@ char_arr=["a","a","z","t","w","q"]
 # print(s.selctionSort(float_ar))
 # print(s.selctionSort(string_arr))
 # print(s.selctionSort(char_arr))
-#print(s.quickSort(interger_arr))
+print(s.mergeSort(float_ar))
